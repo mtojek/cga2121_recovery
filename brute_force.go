@@ -105,11 +105,7 @@ func (bf *bruteForce) checkPassword(client *http.Client, password string) {
 }
 
 func isRetriableError(err error) bool {
-	if err != nil &&
-		(strings.Contains(err.Error(), "connection reset by peer") ||
-			strings.Contains(err.Error(), "timeout awaiting response headers") ||
-			strings.Contains(err.Error(), "with Body length 0") ||
-			strings.Contains(err.Error(), "exceeded while awaiting headers")) {
+	if err != nil && !strings.Contains(err.Error(), "connection refused") {
 		fmt.Print(".")
 		return true
 	}
