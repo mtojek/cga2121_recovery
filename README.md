@@ -1,6 +1,6 @@
 # cga2121_recovery
 
-Recover password from Technicolor CGA2121 using brute-force method.
+Recover password for Technicolor CGA2121 using brute-force method.
 
 ## Usage
 
