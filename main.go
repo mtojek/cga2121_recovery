@@ -8,7 +8,7 @@ import (
 func main() {
 	hostPort := flag.String("hostPort", "192.168.0.1", "host and port")
 	user := flag.String("user", "admin", "user")
-	passwordMinLength := flag.Int("passwordMinLength", 1, "minimal password length")
+	passwordMinLength := flag.Int("passwordMinLength", 4, "minimal password length")
 	passwordPattern := flag.String("passwordPattern", "aA1_", "character patterns")
 	numWorkers := flag.Int("numWorkers", 10, "number of workers")
 	flag.Parse()
